@@ -21,8 +21,8 @@
     "plugin:react/recommended"
   ],
   "rules": {
-      "prettier/prettier": "error",
-      "react/prop-types": "off"
+    "prettier/prettier": "error",
+    "react/prop-types": "off"
   },
   "ignorePatterns": [
     "src/**/*.css",

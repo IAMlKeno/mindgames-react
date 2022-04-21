@@ -1,6 +1,7 @@
+import React from "react";
 import "./App.css";
 import Card from "./components/card";
-import React from "react";
+import Grid from "./components/grid";
 
 function App() {
   const ideas = [
@@ -15,7 +16,7 @@ function App() {
     <div className="App">
       <>
         <h1>MindGames React</h1>
-        {cards}
+        <Grid cards={cards} />
       </>
     </div>
   );
