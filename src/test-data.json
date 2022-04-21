@@ -1,0 +1,13 @@
+{
+  "ideas": [
+    {
+      "title": "Idea 1",
+      "description": "It's an idea alright"
+    },
+    {
+      "title": "Idea 2",
+      "description": "It's still an idea"
+    }
+  ],
+  "features": {}
+}
