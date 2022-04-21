@@ -1,22 +1,21 @@
 import * as React from "react";
-import Idea from "../Model/Idea";
+import Idea from "../model/Idea";
 
 export default class Card extends React.Component {
-
   constructor(props) {
-    super()
+    super();
     this.state = {
-      idea: props.idea
-    }
+      idea: props.idea,
+    };
   }
 
   render() {
     return (
       <div>
         <div>
-          <Idea idea = {this.state.idea} />
+          <Idea idea={this.state.idea} />
         </div>
       </div>
-    )
+    );
   }
 }

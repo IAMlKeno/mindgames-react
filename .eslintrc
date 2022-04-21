@@ -1,0 +1,32 @@
+{
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true,
+    "browser": true
+  },
+  "plugins": [
+    "prettier",
+    "jest"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:jest/recommended",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+      "prettier/prettier": "error",
+      "react/prop-types": "off"
+  },
+  "ignorePatterns": [
+    "src/**/*.css",
+    "src/**/*.svg",
+    "src/**/*.json"
+  ]
+}
