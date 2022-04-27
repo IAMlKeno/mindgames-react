@@ -1,10 +1,12 @@
 {
   "ideas": [
     {
+      "id": 1,
       "title": "Idea 1",
       "description": "It's an idea alright"
     },
     {
+      "id": 2,
       "title": "Idea 2",
       "description": "It's still an idea"
     }

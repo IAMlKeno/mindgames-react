@@ -11,7 +11,7 @@ export default class Button extends React.Component {
   render() {
     return (
       <div style={{ display: "inline-block" }}>
-        <button onClick={this.handleClick}>{this.state.label}</button>
+        <button onClick={this.props.click}>{this.state.label}</button>
       </div>
     );
   }

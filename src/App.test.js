@@ -1,5 +1,11 @@
 import React from "react";
-import { fireEvent, getByRole, getByText, render, screen } from "@testing-library/react";
+import {
+  fireEvent,
+  getByRole,
+  getByText,
+  render,
+  screen,
+} from "@testing-library/react";
 import App from "./App";
 
 test("it renders", () => {
@@ -28,7 +34,7 @@ describe("Start Functional Tests. The app:", () => {
   test("displays new idea form", () => {
     const newIdeaBtn = screen.getByText(/Add Idea/);
     fireEvent.click(newIdeaBtn);
-    expect(getByText(/Add New Idea/)).toBeVisible();
+    expect(screen.getByText(/Add New Idea/)).toBeVisible();
   });
 
   test("can display a new idea", () => {
@@ -36,29 +42,13 @@ describe("Start Functional Tests. The app:", () => {
     const newIdeaDescription = "New idea description";
     const newIdeaBtn = screen.getByText(/Add Idea/);
     fireEvent.click(newIdeaBtn);
-    fireEvent.submit(
-      document.querySelector("#idea-form"), {
-        target: {
-          id: 999,
-          title: newIdeaTitle,
-          description: newIdeaDescription
-        }
-      }
-    );
-
-    const newIdea = screen.getByText(/New idea description/i);
-    expect(newIdea).toBeInTheDocument();
+    fireEvent.submit(document.querySelector("#ideaForm"), {
+      target: {
+        id: 999,
+        title: newIdeaTitle,
+        description: newIdeaDescription,
+      },
+    });
+    expect(screen.getByText(/New idea description/)).toBeVisible();
   });
-
-  // test("can delete an idea", () => {
-
-  // });
-
-  // test("can display an edited idea", () => {
-
-  // });
-
-// you can add a new idea.
-// delete an idea
-// edit and idea
-})
+});
